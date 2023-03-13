@@ -8,7 +8,6 @@ let ticketType = ""; // new or dismissal
 
 if (ticketType === "new") {
   newEmployee = {
-    newEmployee: null,
     fullName: null,
     fullNameLatin: null,
     department: null,
@@ -24,19 +23,10 @@ if (ticketType === "new") {
 }
 
 if (ticketType === "dismissal") {
-  newEmployee = {
-    newEmployee: null,
+  dismissalEmployee = {
     fullName: null,
-    fullNameLatin: null,
-    department: null,
-    supervisor: null,
-    job: null,
-    workingMode: null,
-    releaseDate: null,
+    dismissalDate: null,
     telegram: null,
-    requiredSoftware: null,
-    distributionGroups: null,
-    phone: null,
   };
 }
 
@@ -48,7 +38,7 @@ if (ticketType === "dismissal") {
   await page.focus("#loginform-email");
   await page.keyboard.type("a.zigunov@start.ru");
   await page.focus("#loginform-password");
-  await page.keyboard.type("Sfers009");
+  await page.keyboard.type("");
   await page.click('button[type="submit"]');
   await new Promise((r) => setTimeout(r, 3000));
   await page.goto("https://start.hrbox.io/workflow/cabinet/approver");
