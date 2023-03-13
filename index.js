@@ -50,7 +50,7 @@ if (ticketType === "dismissal") {
   await page.focus("#LoginForm_username");
   await page.keyboard.type("a.zigunov");
   await page.focus("#LoginForm_password");
-  await page.keyboard.type("Sfers009");
+  await page.keyboard.type("");
   await page.click(".btn");
   await new Promise((r) => setTimeout(r, 3000));
   await page.goto("http://10.101.100.31/request/create");
